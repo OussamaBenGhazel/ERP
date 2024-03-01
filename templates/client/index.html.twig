@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Client{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block body %}
+    <h1 class="title">Client List</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for client in clients %}
+            <tr>
+                <td>{{ client.id }}</td>
+                <td>{{ client.nom }}</td>
+                <td>{{ client.adresse }}</td>
+                <td>{{ client.phone }}</td>
+                <td>{{ client.email }}</td>
+                <td>
+                <a href="{{ path('app_client_show', {'id': client.id}) }}"><button type="button" class="btn btn-info">View Client</button></a>
+                <a href="{{ path('app_client_edit', {'id': client.id}) }}"><button type="button" class="btn btn-secondary">Edit Client</button></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no Clients Yet</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+<div class="button-container">
+       <a href="{{ path('app_client_new') }}"><button type="button" class="btn btn-success">Create new Client</button></a>
+    </div>
+{% endblock %}

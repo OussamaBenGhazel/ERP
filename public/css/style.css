@@ -1,0 +1,45 @@
+/* styles.css */
+
+/* Background color */
+body {
+    background-image: url('/asset/bg1.jpg'); /* Adjust the path if needed */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f2f2f2; /* Lighter gray */
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #aaffaa; 
+    border: 2px solid #00aa00; 
+    border-radius: 20px; 
+    text-decoration: none;
+    color: #000; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #bbffbb; /* Light green (hover) */
+}
+.title {
+ padding-left: 100vh;
+ color: bisque;
+}
