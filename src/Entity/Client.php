@@ -25,8 +25,13 @@ class Client
     private ?string $adresse = null;
 
     #[ORM\Column]
-    #[Assert\NotBlank]
-    #[Assert\Positive]
+    #[Assert\NotBlank(message: "Phone number should not be blank.")]
+    #[Assert\Positive(message: "Phone number should be a positive integer.")]
+    #[Assert\Length(
+        min: 8,
+        max: 8,
+        exactMessage: "Phone number should have exactly 8 digits."
+    )]
     private ?int $phone = null;
     
 

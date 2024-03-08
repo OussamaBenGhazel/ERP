@@ -8,10 +8,6 @@
 {% endblock %}
 
 {% block body %}
-{% block stylesheets %}
-    {{ parent() }}
-    <link rel="stylesheet" href="/css/style.css">
-{% endblock %}
     <h1>Edit Client</h1>
 
     {{ include('client/_form.html.twig', {'button_label': 'Update'}) }}

@@ -8,9 +8,20 @@
 {% endblock %}
 
 {% block body %}
-    <h1 class="title">Client List</h1>
+    <h1 class="title1">Client List</h1>
 
-    <table class="table">
+   <form action="{{ path('app_client_index') }}" method="get" class="search-form">
+    <input type="text" name="query" placeholder="Search for clients..." class="search-input">
+    <button type="submit" class="search-button1">Search</button>
+</form>
+<div class="sort-buttons1">
+    <a href="{{ path('app_client_index', {'sort': 'asc'}) }}"><button type="button" class="btn btn-secondary">Sort Ascending</button></a>
+    <a href="{{ path('app_client_index', {'sort': 'desc'}) }}"><button type="button" class="btn btn-secondary">Sort Descending</button></a>
+</div>
+
+
+
+    <table class="table1">
         <thead>
             <tr>
                 <th>Id</th>

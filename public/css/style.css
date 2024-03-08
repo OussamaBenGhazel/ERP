@@ -8,23 +8,23 @@ body {
 }
 
 /* Table styling */
-.table {
+.table1 {
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #ddd;
 }
 
-.table th,
-.table td {
+.table1 th,
+.table1 td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-.table th {
+.table1 th {
     background-color: #f2f2f2; /* Lighter gray */
 }
-.button {
+.button1 {
     display: inline-block;
     padding: 10px 20px;
     background-color: #aaffaa; 
@@ -36,10 +36,45 @@ body {
     text-align: center;
 }
 
-.button:hover {
+.button1:hover {
     background-color: #bbffbb; /* Light green (hover) */
 }
-.title {
+.title1 {
  padding-left: 100vh;
  color: bisque;
+}
+
+/* Search bar */
+.search-form1 {
+    display: flex;
+    align-items: center;
+}
+
+.search-input1 {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    width: 200px; /* Adjust width as needed */
+}
+
+.search-button1 {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button1:hover {
+    background-color: #0056b3;
+}
+/* Sort buttons */
+.sort-buttons1 {
+    margin-top: 10px;
+}
+
+.sort-buttons1 button {
+    margin-right: 10px;
 }
